@@ -1,2 +1,2 @@
 # Aquafeed-App-side
-App front-end side for a feeder project
+AquaFeed is an Android application designed to help pet owners manage the hydration and feeding needs of their pets. The app features a user-friendly interface where users can monitor and replenish their pet's water and food supplies. The app is built using Android's traditional XML layouts and Kotlin for the main functionality.
