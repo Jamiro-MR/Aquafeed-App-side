@@ -19,14 +19,15 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-                android:id="@+id/welcomeText"
+            android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
-            android:text="¡Hola Usuario!"
+            android:text="@string/welcome_text"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
 
         <ImageView
             android:id="@+id/notificationIcon"
@@ -35,7 +36,8 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/notificationicon" />
+            android:contentDescription="@string/icon_notification_desc"
+            android:src="@drawable/notification_icon" />
     </RelativeLayout>
 
     <LinearLayout
@@ -54,16 +56,17 @@
             android:id="@+id/catImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/catDefault" />
+            android:contentDescription="@string/img_status_desc"
+            android:src="@drawable/cat_default" />
 
         <Button
-            android:id="@+id/refillWaterButton"
+            android:id="@+id/refillButton"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#43C6DB"
-            android:text="Reabastecer Agua"
-            android:textColor="#FFFFFF" />
+            android:backgroundTint="@color/secondary"
+            android:text="@string/button_text_refill"
+            android:textColor="@color/text_color" />
     </LinearLayout>
 
     <!-- Water and Food Status || Metan animaciones del cambio de las capsulas (de vacio a lleno)-->
@@ -71,6 +74,7 @@
         android:id="@+id/statusSection"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="32dp"
@@ -88,21 +92,25 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/text_water_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agua"
-                android:textColor="#009688"
+                android:text="@string/text_water_title"
+                android:textColor="@color/water_title_color"
                 android:textSize="18sp" />
 
             <ImageView
+                android:id="@+id/img_water_status"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/waterPillEmpty" />
+                android:src="@drawable/water_pill_empty"
+                android:contentDescription="@string/img_water_status_desc"/>
 
             <TextView
+                android:id="@+id/text_water_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vacío"
+                android:text="@string/text_water_label"
                 android:textColor="#808080"
                 android:textSize="16sp" />
 
@@ -110,9 +118,9 @@
                 android:id="@+id/fillWaterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#43C6DB"
-                android:text="Llenar"
-                android:textColor="#FFFFFF" />
+                android:backgroundTint="@color/secondary"
+                android:text="@string/button_water_text"
+                android:textColor="@color/text_color" />
         </LinearLayout>
 
         <!-- Food Status -->
@@ -125,21 +133,25 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/text_food_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comida"
-                android:textColor="#6D4C41"
+                android:text="@string/text_food_title"
+                android:textColor="@color/food_title_color"
                 android:textSize="18sp" />
 
             <ImageView
+                android:id="@+id/img_food_status"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/foodPillEmpty" />
+                android:src="@drawable/food_pill_empty"
+                android:contentDescription="@string/img_food_status_desc"/>
 
             <TextView
+                android:id="@+id/text_food_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vacío"
+                android:text="@string/text_food_label"
                 android:textColor="#808080"
                 android:textSize="16sp" />
 
@@ -147,9 +159,9 @@
                 android:id="@+id/fillFoodButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#43C6DB"
-                android:text="Llenar"
-                android:textColor="#FFFFFF" />
+                android:backgroundTint="@color/secondary"
+                android:text="@string/button_food_text"
+                android:textColor="@color/text_color" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

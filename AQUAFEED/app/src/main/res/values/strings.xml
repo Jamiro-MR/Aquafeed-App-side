@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">AQUAFEED</string>
+    <string name="welcome_text">¡Hola Usuario!</string>
+    <string name="notification_channel_id">notification_fcm</string>
+
+    <!-- FOOD -->
+    <string name="text_food_title">Comida</string>
+    <string name="text_food_label">%1$</string>
+    <string name="img_food_status_desc">image according to food status</string>
+    <string name="button_food_text">Llenar comida</string>
+
+    <!-- WATER -->
+    <string name="text_water_title">Agua</string>
+    <string name="text_water_label">%1$</string>
+    <string name="img_water_status_desc">image according to water status</string>
+    <string name="button_water_text">Llenar agua</string>
+
+    <!-- OTHERS -->
+    <string name="button_text_refill">Llenar los platos</string>
+    <string name="img_status_desc">image according to water/food status</string>
+    <string name="icon_notification_desc">Icon notification</string>
 </resources>
